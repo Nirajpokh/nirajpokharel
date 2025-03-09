@@ -11,7 +11,7 @@ body {
     background: linear-gradient(135deg, #2c3e50, #34495e); /* Darker gradient */
     color: #ecf0f1; /* Light grey text */
     line-height: 1.6;
-    font-size: 18px;
+    font-size: 1rem; /* Default font size using rem for scalability */
 }
 
 /* Header */
@@ -23,7 +23,7 @@ header {
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 2rem; /* Adjusted for scalability */
     font-weight: bold;
     color: #1abc9c; /* Teal logo color */
     text-transform: uppercase;
@@ -38,7 +38,7 @@ header {
 
 .navbar ul li a {
     color: #ecf0f1; /* Light grey text */
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Adjusted for scalability */
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
@@ -75,13 +75,13 @@ header {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem; /* Adjusted for scalability */
     color: #f39c12; /* Yellow-orange text */
     animation: fadeIn 2s ease-in-out;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Adjusted for scalability */
     color: #bdc3c7; /* Light grey text */
     margin-top: 20px;
     animation: fadeIn 2s ease-in-out;
@@ -95,7 +95,6 @@ header {
     animation: pulse 3s infinite;
 }
 
-
 /* About Section */
 .about {
     padding: 5rem 2rem;
@@ -107,7 +106,7 @@ header {
 }
 
 .about h2 {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Adjusted for scalability */
     color: #f39c12;
     margin-bottom: 2rem;
     font-weight: 600;
@@ -116,7 +115,7 @@ header {
 }
 
 .about-content p {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Adjusted for scalability */
     line-height: 1.6;
     color: #bdc3c7;
     margin-bottom: 20px;
@@ -133,7 +132,7 @@ header {
 
 .social-media a {
     color: #ecf0f1;
-    font-size: 2.8rem;
+    font-size: 2.5rem; /* Adjusted for scalability */
     transition: transform 0.3s ease, color 0.3s ease;
     padding: 12px;
     border-radius: 50%;
@@ -151,7 +150,7 @@ header {
 .social-media a {
     margin: 0 15px;
     color: #ecf0f1;
-    font-size: 2rem;
+    font-size: 2rem; /* Adjusted for scalability */
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -172,7 +171,7 @@ header {
 }
 
 .contact-heading {
-    font-size: 36px;
+    font-size: 2.5rem; /* Adjusted for scalability */
     font-weight: bold;
     color: #f39c12; /* Yellow-orange text */
     margin-bottom: 20px;
@@ -195,7 +194,7 @@ header {
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 1rem; /* Adjusted for scalability */
     background-color: transparent;
     color: #ecf0f1;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
@@ -211,7 +210,7 @@ header {
     padding: 12px;
     background-color: #1abc9c; /* Teal button color */
     color: white;
-    font-size: 18px;
+    font-size: 1rem; /* Adjusted for scalability */
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -229,18 +228,50 @@ header {
 
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
+    /* Adjust header font size */
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    /* Adjust navbar links for mobile */
+    .navbar ul li a {
+        font-size: 1rem;
+    }
+
+    /* Adjust Hero section font size */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* Adjust About section font size */
+    .about h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    /* Adjust Contact heading font size */
     .contact-heading {
-        font-size: 28px;
+        font-size: 2rem;
     }
 
     .input-field {
-        font-size: 16px;
-        padding: 10px;
+        font-size: 1rem;
     }
 
     .submit-btn {
-        font-size: 16px;
-        padding: 10px;
+        font-size: 1rem;
+    }
+
+    /* Adjust social media icons size for mobile */
+    .social-media a {
+        font-size: 2rem; /* Slightly smaller size */
     }
 }
 
@@ -254,7 +285,11 @@ footer {
 .footer-social a {
     margin: 0 15px;
     color: #ecf0f1;
-    font-size: 2rem;
+    font-size: 2rem; /* Adjusted for scalability */
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
+.footer-social a:hover {
+    transform: rotate(360deg) scale(1.3);
+    color: #ff4081; /* Pink hover color */
+}
