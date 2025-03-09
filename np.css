@@ -67,11 +67,13 @@ header {
     align-items: center;
     padding: 5rem 2rem;
     background: #34495e; /* Dark grey-blue background */
+    flex-wrap: wrap; /* Ensures the layout wraps on smaller screens */
 }
 
 .hero-content {
     max-width: 500px;
     text-align: left;
+    flex: 1 1 100%; /* Allow the content to take full width on small screens */
 }
 
 .hero-content h1 {
@@ -88,8 +90,9 @@ header {
 }
 
 .hero-image img {
-    width: 300px;
-    height: 300px;
+    width: 100%; /* Make image responsive */
+    max-width: 300px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 50%;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6);
     animation: pulse 3s infinite;
@@ -164,10 +167,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 110vh;
+    height: auto;
     background-color: #2c3e50; /* Dark blue-grey background */
     flex-direction: column;
     text-align: center;
+    padding: 5rem 2rem;
 }
 
 .contact-heading {
@@ -273,6 +277,12 @@ header {
     .social-media a {
         font-size: 2rem; /* Slightly smaller size */
     }
+
+    /* Adjust hero image size for mobile */
+    .hero-image img {
+        width: 80%; /* Adjust image size for smaller screens */
+        max-width: 250px; /* Max width for the image */
+    }
 }
 
 /* Footer */
@@ -293,3 +303,5 @@ footer {
     transform: rotate(360deg) scale(1.3);
     color: #ff4081; /* Pink hover color */
 }
+
+  
