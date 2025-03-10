@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +6,13 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* Prevent mobile adjustments */
+/* Body */
 body {
     background: linear-gradient(135deg, #2c3e50, #34495e);
     color: #ecf0f1;
     line-height: 1.6;
     font-size: 18px;
-    overflow-x: hidden;
 }
-
 
 /* Header */
 header {
@@ -24,15 +22,12 @@ header {
     background: rgba(0, 0, 0, 0.85);
 }
 
-/* More styles for other sections like Hero, About, etc. */
-
 .logo {
     font-size: 2rem;
     font-weight: bold;
-    color: #1abc9c; /* Teal logo color */
+    color: #1abc9c;
     text-transform: uppercase;
     letter-spacing: 2px;
-    animation: logoMove 2s ease-out infinite;
 }
 
 .navbar ul {
@@ -41,18 +36,16 @@ header {
 }
 
 .navbar ul li a {
-    color: #ecf0f1; /* Light grey text */
+    color: #ecf0f1;
     font-size: 1.2rem;
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
 
 .navbar ul li a:hover {
-    color: #e74c3c; /* Red hover color */
+    color: #e74c3c;
 }
-body {
-    overflow-x: hidden;
-}
+
 
 
 /* Header Animation */
@@ -74,26 +67,31 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 5rem 2rem;
-    background: #34495e; /* Dark grey-blue background */
+    background: #34495e;
 }
 
 .hero-content {
     max-width: 500px;
-    text-align: left;
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
-    color: #f39c12; /* Yellow-orange text */
-    animation: fadeIn 2s ease-in-out;
+    color: #f39c12;
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    color: #bdc3c7; /* Light grey text */
-    margin-top: 20px;
-    animation: fadeIn 2s ease-in-out;
+    color: #bdc3c7;
 }
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    padding: 2rem;
+    text-align: center;
+    color: #ecf0f1;
+}
+
 
 .hero-image img {
     width: 300px;
@@ -235,11 +233,40 @@ body {
     transform: translateY(1px);
 }
 @media (max-width: 768px) {
-    /* Ensure desktop version layout stays */
-    .contact-heading {
-        font-size: 36px;
+    body {
+        font-size: 16px;
+    }
+/* Mobile First: Apply base styles for mobile devices */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
     }
 
+    /* Hero Section: Stack content vertically */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;  /* Smaller font size for mobile */
+    }
+
+    .hero-content p {
+        font-size: 1rem;  /* Smaller text for mobile */
+    }
+
+    /* Navbar: Stack navigation links */
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .navbar ul li a {
+        font-size: 1.1rem;  /* Slightly smaller font size */
+    }
+}
     .input-field {
         font-size: 18px;
         padding: 12px;
