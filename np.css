@@ -70,20 +70,6 @@ header {
     background: #34495e;
 }
 
-.hero-content {
-    max-width: 500px;
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    color: #f39c12;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    color: #bdc3c7;
-}
-
 /* Footer */
 footer {
     background: #2c3e50;
